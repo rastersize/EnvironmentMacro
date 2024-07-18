@@ -29,7 +29,7 @@ public struct EnvironmentMacro: DeclarationMacro {
 
         guard
             // Get the key path argument (`\.somePropertyOnEnvironmentValues`)
-            let keyPathExpression = node.argumentList.first?.expression.as(KeyPathExprSyntax.self),
+            let keyPathExpression = node.arguments.first?.expression.as(KeyPathExprSyntax.self),
             // Get the AST component that contains the name of the key path (`somePropertyOnEnvironmentValues`)
             let keyPathComponent = keyPathExpression.components.first?.component.as(KeyPathPropertyComponentSyntax.self)
         else {

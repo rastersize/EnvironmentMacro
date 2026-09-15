@@ -1,11 +1,11 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.4
 
 import PackageDescription
 import CompilerPluginSupport
 
 let package = Package(
     name: "EnvironmentMacro",
-    platforms: [.macOS(.v12), .iOS(.v15), .tvOS(.v15), .watchOS(.v8), .macCatalyst(.v15)],
+    platforms: [.macOS(.v14), .iOS(.v17), .tvOS(.v17), .watchOS(.v9), .macCatalyst(.v17)],
     products: [
         .library(
             name: "EnvironmentMacro",
@@ -17,7 +17,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-syntax.git", from: "510.0.2"),
+        .package(url: "https://github.com/apple/swift-syntax.git", from: "604.0.0"),
     ],
     targets: [
         // Macro implementation that performs the source transformation of a macro.
